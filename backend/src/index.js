@@ -6,6 +6,8 @@ import express from "express";
 //Is used to load environment variables from a .env 
 // file into your Node.js application
 import dotenv from "dotenv";
+import cors from "cors"
+import cookieParser from "cookie-parser";
 import {connectDB} from "./lib/db.js"
 import authRoutes from "./routes/auth.route.js";
 
@@ -14,6 +16,13 @@ const app = express();
 //This line tells Express to automatically parse incoming JSON requests — 
 //and populate req.body with the parsed data.
 app.use(express.json());
+app.use(cookieParser());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true, //Allow the cookies and authorizaions
+  })
+);
 
 const PORT = process.env.PORT;
 
