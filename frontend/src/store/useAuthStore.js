@@ -50,7 +50,7 @@ export const useAuthStore = create((set,) => ({
         set({ isLoggingIn: false });
       }
     },
-    
+
     logout: async () => {
       try {
         await axiosInstance.post("/auth/logout");
@@ -59,6 +59,9 @@ export const useAuthStore = create((set,) => ({
       } catch (error) {
         toast.error(error.response.data.message);
       }
+    },
+
+    updateProfile: async (data) => {
     },
     
 }));
