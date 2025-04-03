@@ -11,9 +11,10 @@ import cookieParser from "cookie-parser";
 import {connectDB} from "./lib/db.js"
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
+import { app, server } from "./lib/socket.js";
 
 dotenv.config();
-const app = express();
+
 //This line tells Express to automatically parse incoming JSON requests — 
 //and populate req.body with the parsed data.
 app.use(express.json());
@@ -30,7 +31,7 @@ const PORT = process.env.PORT;
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log("Server is running on port:" + PORT);
     connectDB()
 });
