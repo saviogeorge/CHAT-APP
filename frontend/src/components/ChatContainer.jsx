@@ -12,6 +12,8 @@ const ChatContainer = () => {
   const {
     messages,
     getMessages,
+    subscribeToMessages,
+    unsubscribeFromMessages,
     isMessagesLoading,
     selectedUser,} = useChatStore();
 
@@ -19,7 +21,11 @@ const ChatContainer = () => {
     const messageEndRef = useRef(null);
 
     useEffect(() => {
-      getMessages(selectedUser._id)}, [selectedUser._id, getMessages]);
+      getMessages(selectedUser._id);    
+      subscribeToMessages();
+
+      return () => unsubscribeFromMessages();
+    }, [selectedUser._id, getMessages, subscribeToMessages, unsubscribeFromMessages]);
 
     if (isMessagesLoading) {
       return (         <div className="flex-1 flex flex-col overflow-auto">

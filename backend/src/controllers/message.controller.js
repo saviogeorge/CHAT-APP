@@ -64,7 +64,13 @@ try {
     //save the message to the DB
     await newMessage.save();
 
-    //TODO: real time socket.io handling
+    //real time socket.io handling
+    const receiverSocketId = getReceiverSocketId(receiverId);
+    //if user is online
+    //send the message 
+    if (receiverSocketId) {
+      io.to(receiverSocketId).emit("newMessage", newMessage);
+    }
 
     res.status(201).json(newMessage);
 } catch (error) {
