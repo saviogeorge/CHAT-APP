@@ -14,7 +14,7 @@ If you are developing a production application, we recommend using TypeScript an
 
 
 
-notes:
+References:
 https://www.udemy.com/course/the-web-dev-bootcamp/?referralCode=813BDEAF8C4F27ED6E74&couponCode=ST22MT240325G2
 https://www.youtube.com/watch?v=ntKkVrQqBYY
 https://cloud.mongodb.com/v2/67e1bf4232f599120034833f#/clusters
