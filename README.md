@@ -1,4 +1,4 @@
-
+![snapshot](https://github.com/saviogeorge/CHAT-APP/blob/main/frontend/public/Screenshot%20from%202025-04-06%2012-50-28.png)
 
 .env file
 ```
