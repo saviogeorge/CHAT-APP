@@ -79,18 +79,22 @@ npm run dev
 CHAT-APP/
 ├── backend/
 │   ├── controllers/
+│   |── lib/
+│   |── middleware/
 │   ├── models/
 │   ├── routes/
-│   ├── utils/
 │   ├── .env
-│   ├── server.js
+│   ├── index.js
 ├── frontend/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
+|   |   ├── lib/
 │   │   ├── pages/
-│   │   ├── App.js
-│   │   ├── index.js
+│   │   ├── store/
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
 ├── README.md
 ```
 
