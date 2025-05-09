@@ -87,5 +87,6 @@ CHAT-APP/
 ```
 ![snapshot](https://github.com/saviogeorge/CHAT-APP/blob/main/frontend/public/Screenshot%20from%202025-04-06%2012-50-28.png)
 
-
+# References
+https://www.youtube.com/watch?v=ntKkVrQqBYY&t=625s
 
